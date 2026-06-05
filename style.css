@@ -1,0 +1,125 @@
+/* إعدادات عامة */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Tahoma", Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.8;
+}
+
+/* الهيدر */
+.main-header {
+  background: linear-gradient(135deg, #1e88e5, #42a5f5);
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.main-header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.main-header p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* المقدمة */
+.intro {
+  background-color: white;
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+  text-align: center;
+}
+
+/* الأقسام */
+.sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+/* البطاقة */
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* زر الدخول */
+.card a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #1e88e5;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.card a:hover {
+  background-color: #1565c0;
+}
+
+/* الفوتر */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #1e88e5;
+  color: white;
+  font-size: 13px;
+  margin-top: 40px;
+}
+
+/* استجابة للهاتف */
+@media (max-width: 600px) {
+  .main-header h1 {
+    font-size: 22px;
+  }
+
+  .card h2 {
+    font-size: 16px;
+  }
+}
+/* تأثير الضغط على الهاتف */
+.card.active {
+  transform: scale(0.97);
+}
+img{
+    border-radius: 50%;
+    width: 100px;
+}

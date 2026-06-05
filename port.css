@@ -1,0 +1,106 @@
+#portfolio{
+    padding:100px 5%;
+}
+/*
+.portfolio-container{
+    display:grid;
+     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap:40px;
+    width: 100%;
+    margin: 20px auto;
+     max-width: 1200px;
+}
+*/
+.portfolio-container {
+  display: flex;
+  flex-direction: row; /* تأكد أنها بجانب بعضها وليس تحت */
+  flex-wrap: wrap; /* لتنتقل للسطر التالي إذا ضاقت الشاشة */
+  gap: 40px;
+  margin: 20px;
+  justify-content: flex-start; /* أو center إذا أردتها في الوسط */
+}
+
+.project-card {
+  background: #86b1e2;
+  border-radius: 20px;
+  overflow: hidden;
+  width: calc(33.333% - 27px); /* 3 كروت بجانب بعض مع مراعاة الـ gap */
+  /* أو استخدم عرض ثابت: width: 300px; */
+}
+/*
+.project-card{
+    background:#86b1e2;
+    border-radius:20px;
+    overflow:hidden;
+}
+    */
+
+.project-card video{
+    width:100%;
+    display:block;
+}
+
+.project-info{
+    padding:25px;
+}
+
+.project-info h3{
+    margin-bottom:10px;
+}
+
+.project-info p{
+    line-height:1.7;
+    opacity:.8;
+}
+
+.project-details{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.project-details span{
+    background:#4343fd;
+    padding:8px 15px;
+    border-radius:30px;
+}
+.section-title{
+    background-color: rgb(77, 77, 189);
+    height: 150px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    text-align: center;
+    font-style: italic;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    
+    /* التدرج اللوني */
+    background: linear-gradient(45deg, #0133fc, #df5242, #3e5bff);
+    background-size: 400% 400%;
+    
+    /* الحركة الخفيفة */
+    animation: gentleGradientMove 12s ease infinite;
+}
+
+/* حركة التدرج */
+@keyframes gentleGradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.project-card video {
+  width: 100%;
+  height: 400px; /* ارتفاع ثابت للجميع */
+  object-fit: cover; /* اقتصاص الفيديو ليملأ المساحة */
+}
